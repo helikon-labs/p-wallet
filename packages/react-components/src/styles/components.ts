@@ -68,7 +68,7 @@ export default `
     border: 1px solid var(--border-identicon);
     border-radius: 50%;
     display: inline-block;
-    overflow: hidden;
+    overflow: visible;
 
     svg circle:first-child {
       fill: var(--bg-identicon-circle);
