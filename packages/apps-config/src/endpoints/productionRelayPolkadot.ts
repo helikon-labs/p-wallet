@@ -810,20 +810,6 @@ export const prodParasPolkadot: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    homepage: 'https://xcavate.io/',
-    info: 'xcavate',
-    paraId: 3413,
-    providers: {
-      Xcavate: 'wss://rpc1-polkadot.xcavate.io'
-    },
-    relayName: 'polkadot',
-    text: 'Xcavate',
-    ui: {
-      color: '#FF0083',
-      logo: chainsMyxcavPNG
-    }
-  },
-  {
     homepage: 'https://xode.net',
     info: 'xode',
     paraId: 3417,

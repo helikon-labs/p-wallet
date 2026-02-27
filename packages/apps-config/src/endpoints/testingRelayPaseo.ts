@@ -437,19 +437,6 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     }
   },
   {
-    homepage: 'https://xcavate.io/',
-    info: 'Xcavate',
-    paraId: 4683,
-    providers: {
-      Xcavate_OnFinality: 'wss://xcavate-paseo.api.onfinality.io/public-ws'
-    },
-    text: 'Xcavate',
-    ui: {
-      color: '#FF0083',
-      logo: chainsMyxcavPNG
-    }
-  },
-  {
     homepage: 'https://xode.net',
     info: 'paseoXode',
     paraId: 4607,
