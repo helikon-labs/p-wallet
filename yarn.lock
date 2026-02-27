@@ -1585,7 +1585,6 @@ __metadata:
     "@polkadot/react-hooks": "npm:^0.170.1"
     "@polkadot/test-support": "npm:0.170.1"
     "@polkadot/util": "npm:^13.5.9"
-    "@polkadot/vanitygen": "npm:^0.63.19"
     detect-browser: "npm:^5.3.0"
     file-saver: "npm:^2.0.5"
   peerDependencies:
@@ -2873,20 +2872,6 @@ __metadata:
     bn.js: "npm:^5.2.1"
     tslib: "npm:^2.8.0"
   checksum: 10/f3b9d66dff334e1204f3f8fecd74fe64dafec014551c99bcfde1d1270e1559fa68129fd3a47f090c6c174cdd3b9b0d9cbe95a4de4cb5172ca84c9fdd6147a0bb
-  languageName: node
-  linkType: hard
-
-"@polkadot/vanitygen@npm:^0.63.19":
-  version: 0.63.19
-  resolution: "@polkadot/vanitygen@npm:0.63.19"
-  dependencies:
-    "@polkadot/util": "npm:^13.5.9"
-    "@polkadot/util-crypto": "npm:^13.5.9"
-    tslib: "npm:^2.8.1"
-    yargs: "npm:^17.7.2"
-  bin:
-    polkadot-js-vanitygen: runcli.mjs
-  checksum: 10/6f7718d37037b28aba1e8ff15a5b3c3c77a05a9dc08a8010db159633963aea389bae57e79b7915cf7db8362d0245433329d26cc22a4d118fd611823cfcc63fb9
   languageName: node
   linkType: hard
 

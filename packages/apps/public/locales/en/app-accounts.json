@@ -184,7 +184,6 @@
   "Upload JSON file with signatories": "Upload JSON file with signatories",
   "Use custom address index": "Use custom address index",
   "Use custom derivation path": "Use custom derivation path",
-  "Vanity generator": "Vanity generator",
   "View pending approvals": "View pending approvals",
   "We will provide you with a generated backup file after your account is created. As long as you have access to your account you can always download this file later by clicking on \"Backup\" button from the Accounts section.": "We will provide you with a generated backup file after your account is created. As long as you have access to your account you can always download this file later by clicking on \"Backup\" button from the Accounts section.",
   "You can batch export accounts, but only for in-browser, QR, and multisig types.": "You can batch export accounts, but only for in-browser, QR, and multisig types.",
