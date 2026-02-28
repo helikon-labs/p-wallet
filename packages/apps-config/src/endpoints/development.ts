@@ -16,11 +16,9 @@ interface EnvWindow {
 function findUiForUrl (url: string, endpoints: EndpointOption[]): LinkOption['ui'] {
   // Search through all endpoints to find a matching provider URL
   for (const endpoint of endpoints) {
-    if (endpoint.providers) {
-      for (const providerUrl of Object.values(endpoint.providers)) {
-        if (providerUrl === url) {
-          return endpoint.ui;
-        }
+    for (const provider of endpoint.providers) {
+      if (provider.url === url) {
+        return endpoint.ui;
       }
     }
 

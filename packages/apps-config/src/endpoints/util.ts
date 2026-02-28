@@ -54,7 +54,8 @@ function expandLinked (input: LinkOption[]): LinkOption[] {
 }
 
 function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, isChild, isDisabled, isPeople, isPeopleForIdentity, isUnreachable, linked, paraId, providers, relayName, teleport, text, ui }: EndpointOption, firstOnly: boolean, withSort: boolean): LinkOption[] {
-  const hasProviders = Object.keys(providers).length !== 0;
+  const availableProviders = providers.filter((provider) => provider.isAvailable);
+  const hasProviders = availableProviders.length !== 0;
   const base = {
     genesisHash,
     homepage,
@@ -65,29 +66,32 @@ function expandEndpoint (t: TFunction, { dnslink, genesisHash, homepage, info, i
     isPeopleForIdentity,
     isUnreachable: isUnreachable || !hasProviders,
     paraId,
-    providers: Object.keys(providers).map((k) => providers[k]),
+    providers: availableProviders.map((provider) => provider.url),
     relayName,
     teleport,
     text,
     ui
   };
 
-  const result = Object
-    .entries(
-      hasProviders
-        ? providers
-        : { Placeholder: `wss://${++dummyId}` }
-    )
+  if (availableProviders.length === 0) {
+    availableProviders.push({
+      isAvailable: true,
+      name: 'Placeholder',
+      url: `wss://${++dummyId}`
+    });
+  }
+
+  const result = availableProviders
     .filter((_, index) => !firstOnly || index === 0)
-    .map(([host, value], index): LinkOption => ({
+    .map((provider, index): LinkOption => ({
       ...base,
       dnslink: index === 0 ? dnslink : undefined,
-      isLightClient: value.startsWith('light://'),
+      isLightClient: provider.url.startsWith('light://'),
       isRelay: false,
-      textBy: value.startsWith('light://')
+      textBy: provider.url.startsWith('light://')
         ? t('lightclient.experimental', 'light client (experimental)', { ns: 'apps-config' })
-        : t('rpc.hosted.via', 'via {{host}}', { ns: 'apps-config', replace: { host } }),
-      value
+        : t('rpc.hosted.via', 'via {{host}}', { ns: 'apps-config', replace: { host: provider.name } }),
+      value: provider.url
     }))
     .sort((a, b) =>
       a.isLightClient

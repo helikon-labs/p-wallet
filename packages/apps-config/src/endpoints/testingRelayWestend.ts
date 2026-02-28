@@ -19,9 +19,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'bulletin',
     paraId: 2487,
-    providers: {
-      Parity: 'wss://westend-bulletin-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-bulletin-rpc.polkadot.io'
+    }],
     text: 'Bulletin (Westend)',
     ui: {
       color: '#6B2D84',
@@ -31,9 +33,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'charcoal',
     paraId: 2086,
-    providers: {
-      // Centrifuge: 'wss://fullnode-collator.charcoal.centrifuge.io' // https://github.com/polkadot-js/apps/issues/8219
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/8219
+      name: 'Centrifuge',
+      url: 'wss://fullnode-collator.charcoal.centrifuge.io'
+    }],
     text: 'Charcoal',
     ui: {
       logo: nodesCentrifugePNG
@@ -42,9 +46,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'integritee',
     paraId: 2081,
-    providers: {
-      // Integritee: 'wss://teerw1.integritee.network' // https://github.com/polkadot-js/apps/issues/8937
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/8937
+      name: 'Integritee',
+      url: 'wss://teerw1.integritee.network'
+    }],
     text: 'Integritee Network',
     ui: {
       color: '#658ea9',
@@ -54,9 +60,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'interlay',
     paraId: 2094,
-    providers: {
-      // Interlay: 'wss://api-westend.interlay.io/parachain' // https://github.com/polkadot-js/apps/issues/6261
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/6261
+      name: 'Interlay',
+      url: 'wss://api-westend.interlay.io/parachain'
+    }],
     text: 'Interlay',
     ui: {
       logo: nodesInterlaySVG
@@ -65,9 +73,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'moonshadow',
     paraId: 2002,
-    providers: {
-      // PureStake: 'wss://wss.moonshadow.testnet.moonbeam.network' // https://github.com/polkadot-js/apps/issues/6181
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/6181
+      name: 'PureStake',
+      url: 'wss://wss.moonshadow.testnet.moonbeam.network'
+    }],
     text: 'Moonshadow',
     ui: {
       color: '#53cbc9',
@@ -78,9 +88,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
     info: 'westendPenpal',
     isPeopleForIdentity: true,
     paraId: 2042,
-    providers: {
-      Parity: 'wss://westend-penpal-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-penpal-rpc.polkadot.io'
+    }],
     relayName: 'westend',
     text: 'Penpal',
     ui: {
@@ -91,9 +103,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
     homepage: 'https://kylin.network/',
     info: 'westendPichiu',
     paraId: 2112,
-    providers: {
-      // 'Kylin Network': 'wss://westend.kylin-node.co.uk' // https://github.com/polkadot-js/apps/issues/8710
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/8710
+      name: 'Kylin Network',
+      url: 'wss://westend.kylin-node.co.uk'
+    }],
     text: 'Pichiu',
     ui: {
       logo: nodesKylinPNG
@@ -102,9 +116,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'westendStandard',
     paraId: 2094,
-    providers: {
-      // 'Standard Protocol': 'wss://rpc.westend.standard.tech' // https://github.com/polkadot-js/apps/issues/8525
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/8525
+      name: 'Standard Protocol',
+      url: 'wss://rpc.westend.standard.tech'
+    }],
     text: 'Standard',
     ui: {
       logo: chainsStandardPNG
@@ -113,9 +129,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'karura',
     paraId: 2005,
-    providers: {
-      // 'Acala Foundation': 'wss://karura-westend-rpc.aca-staging.network' // https://github.com/polkadot-js/apps/issues/5830
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/5830
+      name: 'Acala Foundation',
+      url: 'wss://karura-westend-rpc.aca-staging.network'
+    }],
     text: 'Wendala',
     ui: {
       logo: chainsKaruraSVG
@@ -124,9 +142,11 @@ export const testParasWestend: Omit<EndpointOption, 'teleport'>[] = [
   {
     info: 'whala',
     paraId: 2013,
-    providers: {
-      // Phala: 'wss://whala.phala.network/ws' // https://github.com/polkadot-js/apps/issues/6181
-    },
+    providers: [{
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/6181
+      name: 'Phala',
+      url: 'wss://whala.phala.network/ws'
+    }],
     text: 'Whala',
     ui: {
       color: '#03f3f3',
@@ -140,14 +160,31 @@ export const testParasWestendCommon: EndpointOption[] = [
     info: 'WestendAssetHub',
     isPeopleForIdentity: true,
     paraId: 1000,
-    providers: {
-      Dwellir: 'wss://asset-hub-westend-rpc.n.dwellir.com',
-      'Dwellir Tunisia': 'wss://westmint-rpc-tn.dwellir.com',
-      // OnFinality: 'wss://westmint.api.onfinality.io/public-ws', // https://github.com/polkadot-js/apps/issues/9955
-      Parity: 'wss://westend-asset-hub-rpc.polkadot.io'
-      // 'Permanence DAO EU': 'wss://asset-hub-westend.rpc.permanence.io'
-      // Stakeworld: 'wss://wnd-rpc.stakeworld.io/assethub'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Dwellir',
+      url: 'wss://asset-hub-westend-rpc.n.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Dwellir Tunisia',
+      url: 'wss://westmint-rpc-tn.dwellir.com'
+    }, {
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/9955
+      name: 'OnFinality',
+      url: 'wss://westmint.api.onfinality.io/public-ws'
+    }, {
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-asset-hub-rpc.polkadot.io'
+    }, {
+      isAvailable: false,
+      name: 'Permanence DAO EU',
+      url: 'wss://asset-hub-westend.rpc.permanence.io'
+    }, {
+      isAvailable: false,
+      name: 'Stakeworld',
+      url: 'wss://wnd-rpc.stakeworld.io/assethub'
+    }],
     relayName: 'westend',
     teleport: [-1, 1002, 1001, 1005, 1004],
     text: 'Asset Hub',
@@ -160,12 +197,23 @@ export const testParasWestendCommon: EndpointOption[] = [
     info: 'westendBridgeHub',
     isPeopleForIdentity: true,
     paraId: 1002,
-    providers: {
-      Dwellir: 'wss://bridge-hub-westend-rpc.n.dwellir.com',
-      'Dwellir Tunisia': 'wss://westend-bridge-hub-rpc-tn.dwellir.com',
-      // OnFinality: 'wss://bridgehub-westend.api.onfinality.io/public-ws', // https://github.com/polkadot-js/apps/issues/9960
-      Parity: 'wss://westend-bridge-hub-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Dwellir',
+      url: 'wss://bridge-hub-westend-rpc.n.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Dwellir Tunisia',
+      url: 'wss://westend-bridge-hub-rpc-tn.dwellir.com'
+    }, {
+      isAvailable: false, // https://github.com/polkadot-js/apps/issues/9960
+      name: 'OnFinality',
+      url: 'wss://bridgehub-westend.api.onfinality.io/public-ws'
+    }, {
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-bridge-hub-rpc.polkadot.io'
+    }],
     relayName: 'westend',
     teleport: [-1, 1000],
     text: 'Bridge Hub',
@@ -177,11 +225,19 @@ export const testParasWestendCommon: EndpointOption[] = [
     info: 'westendCollectives',
     isPeopleForIdentity: true,
     paraId: 1001,
-    providers: {
-      Dwellir: 'wss://collectives-westend-rpc.n.dwellir.com',
-      'Dwellir Tunisia': 'wss://westend-collectives-rpc-tn.dwellir.com',
-      Parity: 'wss://westend-collectives-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Dwellir',
+      url: 'wss://collectives-westend-rpc.n.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Dwellir Tunisia',
+      url: 'wss://westend-collectives-rpc-tn.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-collectives-rpc.polkadot.io'
+    }],
     relayName: 'westend',
     teleport: [-1, 1000],
     text: 'Collectives',
@@ -194,10 +250,15 @@ export const testParasWestendCommon: EndpointOption[] = [
     info: 'westendCoretime',
     isPeopleForIdentity: true,
     paraId: 1005,
-    providers: {
-      Dwellir: 'wss://coretime-westend-rpc.n.dwellir.com',
-      Parity: 'wss://westend-coretime-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Dwellir',
+      url: 'wss://coretime-westend-rpc.n.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-coretime-rpc.polkadot.io'
+    }],
     relayName: 'westend',
     teleport: [-1, 1000],
     text: 'Coretime',
@@ -210,10 +271,15 @@ export const testParasWestendCommon: EndpointOption[] = [
     isPeople: true,
     isPeopleForIdentity: false,
     paraId: 1004,
-    providers: {
-      Dwellir: 'wss://people-westend-rpc.n.dwellir.com',
-      Parity: 'wss://westend-people-rpc.polkadot.io'
-    },
+    providers: [{
+      isAvailable: true,
+      name: 'Dwellir',
+      url: 'wss://people-westend-rpc.n.dwellir.com'
+    }, {
+      isAvailable: true,
+      name: 'Parity',
+      url: 'wss://westend-people-rpc.polkadot.io'
+    }],
     relayName: 'westend',
     teleport: [-1, 1000],
     text: 'People',
@@ -234,16 +300,39 @@ export const testRelayWestend: EndpointOption = {
     ...testParasWestendCommon,
     ...testParasWestend
   ],
-  providers: {
-    Dwellir: 'wss://westend-rpc.n.dwellir.com',
-    'Dwellir Tunisia': 'wss://westend-rpc-tn.dwellir.com',
-    // LuckyFriday: 'wss://rpc-westend.luckyfriday.io', // https://github.com/polkadot-js/apps/issues/10728
-    OnFinality: 'wss://westend.api.onfinality.io/public-ws',
-    Parity: 'wss://westend-rpc.polkadot.io',
-    RadiumBlock: 'wss://westend.public.curie.radiumblock.co/ws',
-    // Stakeworld: 'wss://wnd-rpc.stakeworld.io',
-    'light client': 'light://substrate-connect/westend'
-  },
+  providers: [{
+    isAvailable: true,
+    name: 'Dwellir',
+    url: 'wss://westend-rpc.n.dwellir.com'
+  }, {
+    isAvailable: true,
+    name: 'Dwellir Tunisia',
+    url: 'wss://westend-rpc-tn.dwellir.com'
+  }, {
+    isAvailable: false, // https://github.com/polkadot-js/apps/issues/10728
+    name: 'LuckyFriday',
+    url: 'wss://rpc-westend.luckyfriday.io'
+  }, {
+    isAvailable: true,
+    name: 'OnFinality',
+    url: 'wss://westend.api.onfinality.io/public-ws'
+  }, {
+    isAvailable: true,
+    name: 'Parity',
+    url: 'wss://westend-rpc.polkadot.io'
+  }, {
+    isAvailable: true,
+    name: 'RadiumBlock',
+    url: 'wss://westend.public.curie.radiumblock.co/ws'
+  }, {
+    isAvailable: false,
+    name: 'Stakeworld',
+    url: 'wss://wnd-rpc.stakeworld.io'
+  }, {
+    isAvailable: true,
+    name: 'light client',
+    url: 'light://substrate-connect/westend'
+  }],
   teleport: getTeleports(testParasWestendCommon),
   text: 'Westend Relay',
   ui: {

@@ -61,7 +61,11 @@ export interface EndpointOption extends BaseOption {
   /**
    * Declares the list of all RPC providers
    */
-  providers: Record<string, `${'wss://' | 'light://substrate-connect/'}${string}`>;
+  providers: {
+    name: string;
+    url: `${'wss://' | 'light://substrate-connect/'}${string}`;
+    isAvailable: boolean,
+  }[];
   /**
    * Declares chain name
    */
